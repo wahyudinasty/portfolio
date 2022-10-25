@@ -1,0 +1,19 @@
+{
+  "folders": [
+	{
+		"path": ".."
+	},
+	{
+		"path": "../../WAHYUhtml"
+	},
+	{
+		"path": "I:/S4/Web Desain/280/Quiz"
+	},
+	{
+		"path": "../../portfolio"
+	}
+],
+  "settings": {
+    "liveServer.settings.multiRootWorkspaceName": "web Programming"
+  }
+}
