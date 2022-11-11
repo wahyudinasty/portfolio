@@ -10,10 +10,13 @@
 section {
   padding-top: 6rem;
 }
+.gallery-img {
+  width: 100%;
+}
 
 /* style slide */
 
-.gallery {
+/* .gallery {
   padding-top: 8rem;
   padding-left: 10rem;
   padding-bottom: 8rem;
@@ -22,8 +25,9 @@ section {
   height: 200px;
   transform-style: preserve-3d;
   animation: rotate 35s linear infinite;
-}
-@keyframes rotate {
+} */
+
+/* @keyframes rotate {
   from {
     transform: perspective(1000px) rotateY(0deg);
   }
@@ -45,4 +49,4 @@ section {
   height: 90%;
   object-fit: cover;
   border-radius: 50px;
-}
+} */
