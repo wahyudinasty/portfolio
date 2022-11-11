@@ -13,10 +13,98 @@ section {
 .gallery-img {
   width: 100%;
 }
+.medsos {
+  display: inline-flex;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+.medsos .icon {
+  margin: 0 20px;
+  text-align: center;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+  z-index: 2;
+  transition: 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.medsos .icon span {
+  display: block;
+  height: 60px;
+  width: 60px;
+  background: white;
+  border-radius: 50%;
+  position: relative;
+  z-index: 2;
+  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
+  transition: 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.medsos .icon i {
+  line-height: 60px;
+  font-size: 25px;
+}
+.medsos .icon .tooltip {
+  position: absolute;
+  top: 0;
+  z-index: 1;
+  background: rgb(222, 37, 37);
+  color: white;
+  font-size: 20px;
+  font-weight: 500;
+  padding: 10px 10px;
+  border-radius: 25px;
+  opacity: 0;
+  pointer-events: none;
+  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
+  transition: 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.medsos .icon:hover .tooltip {
+  top: -70px;
+  opacity: 1;
+  pointer-events: auto;
+}
+.icon .tooltip::before {
+  position: absolute;
+  content: "";
+  height: 15px;
+  width: 15px;
+  background: rgb(222, 37, 37);
+  left: 50%;
+  bottom: -6px;
+  transform: translateX(-50%) rotate(45deg);
+  transition: 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.medsos .icon:hover .span {
+  color: rgb(0, 0, 0);
+}
+.medsos .icon:hover .span,
+.medsos .icon:hover .tooltip {
+  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.4);
+}
+.medsos .instagram:hover .span,
+.medsos .instagram:hover .tooltip,
+.medsos .instagram:hover .tooltip:before {
+  background-color: #000000;
+}
+.medsos.github:hover .span,
+.medsos.github:hover .tooltip,
+.medsos.github:hover .tooltip:before {
+  background: #8f660c;
+}
+.medsos.youtube:hover .span,
+.medsos.youtube:hover .tooltip,
+.medsos.youtube:hover .tooltip:before {
+  background: orange;
+}
+.medsos.facebook:hover .span,
+.medsos.facebook:hover .tooltip,
+.medsos.facebook:hover .tooltip:before {
+  background: orange;
+}
 
-/* style slide */
-
-/* .gallery {
+/* style slide */ /* .gallery {
   padding-top: 8rem;
   padding-left: 10rem;
   padding-bottom: 8rem;
@@ -26,7 +114,6 @@ section {
   transform-style: preserve-3d;
   animation: rotate 35s linear infinite;
 } */
-
 /* @keyframes rotate {
   from {
     transform: perspective(1000px) rotateY(0deg);

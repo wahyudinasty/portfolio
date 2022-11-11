@@ -14,12 +14,16 @@
     <!-- AOS -->
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <!-- akhir AOS -->
+    <!-- font awesome -->
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" />
+    <!-- akhir font awesome -->
     <!-- my css -->
     <link rel="stylesheet" href="style1.css" />
     <!-- akhir css -->
 
     <title>PortFolio | Wahyudi nasty</title>
   </head>
+
   <body id="home">
     <!-- navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-warning shadow fixed-top">
@@ -284,7 +288,34 @@ Harus akrab dengan teknologi.
 
     <!-- footer -->
 
-    <footer class="bg-warning text-white text-center pb-5">
+    <footer class="bg-warning text-center pb-5">
+      <div class="medsos">
+        <div class="icon 1">
+          <a href="https://www.instagram.com/wh___________________________/">
+            <div class="tooltip">Instagram</div>
+            <span><i class="fab fa-instagram"></i></span>
+          </a>
+        </div>
+        <div class="icon 2">
+          <a href="https://github.com/wahyudinasty">
+            <div class="tooltip">GitHub</div>
+            <span><i class="fab fa-github"></i></span>
+          </a>
+        </div>
+        <div class="icon 3">
+          <a href="https://www.youtube.com/channel/UC6niLy7kRhj8yvuoAxvrsRQ">
+            <div class="tooltip">Youtube</div>
+            <span><i class="fab fa-youtube"></i></span>
+          </a>
+        </div>
+        <div class="icon 4">
+          <a href="https://www.facebook.com/ibnu.nasrul1906">
+            <div class="tooltip">Facebook</div>
+            <span><i class="fab fa-facebook"></i></span>
+          </a>
+        </div>
+      </div>
+
       <p>Created with <i class="bi bi-stars text-primary"></i> by <a href="https://www.instagram.com/wh___________________________/" class="text-white fw-bold">Wahyudi Nasty</a></p>
     </footer>
 
@@ -303,10 +334,29 @@ Harus akrab dengan teknologi.
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/TextPlugin.min.js"></script>
     <script>
       gsap.registerPlugin(TextPlugin);
-      gsap.to(".lead", { duration: 1.5, delay: 1.2, text: "College Student | UPI YPTK Padang" });
-      gsap.from(".jumbotron img", { duration: 1, rotateY: 360, opacity: 0 });
-      gsap.from(".navbar", { duration: 1, ease: "bounce.out", y: -100, opacity: 0 });
-      gsap.from(".display-4", { duration: 1, x: -50, opacity: 0, delay: 0.5, ease: "back" });
+      gsap.to(".lead", {
+        duration: 1.5,
+        delay: 1.2,
+        text: "College Student | UPI YPTK Padang",
+      });
+      gsap.from(".jumbotron img", {
+        duration: 1,
+        rotateY: 360,
+        opacity: 0,
+      });
+      gsap.from(".navbar", {
+        duration: 1,
+        ease: "bounce.out",
+        y: -100,
+        opacity: 0,
+      });
+      gsap.from(".display-4", {
+        duration: 1,
+        x: -50,
+        opacity: 0,
+        delay: 0.5,
+        ease: "back",
+      });
     </script>
 
     <script>
@@ -322,7 +372,10 @@ Harus akrab dengan teknologi.
         //tampilkan tmbl loading, hilangkam tombol kirim
         btnLoading.classList.toggle("d-none");
         btnKirim.classList.toggle("d-none");
-        fetch(scriptURL, { method: "POST", body: new FormData(form) })
+        fetch(scriptURL, {
+          method: "POST",
+          body: new FormData(form),
+        })
           .then((response) => {
             console.log;
             //tampilkan tmbl kirim, hilangkam tombol loading
